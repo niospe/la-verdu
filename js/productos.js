@@ -18,63 +18,60 @@ let productos = [
 // Mostrar los productos en el HTML
 const fichaProducto = document.getElementById("productoFicha");
 
-if (fichaProducto) {
-    productos.forEach((producto) => {
-        const divProducto = document.createElement("div");
-        divProducto.className = "producto"; 
+productos.forEach((producto) => {
+    const divProducto = document.createElement("div");
+    divProducto.className = "producto"; 
+    
+    divProducto.innerHTML = `
+        <h3>${producto.nombre}</h3>
+        <p>Precio: $${producto.precio} / ${producto.unidad}</p>
+    `;
+    
+    const cantidadInput = document.createElement("input");
+    cantidadInput.type = "number";
+    cantidadInput.min = producto.unidad === "un" ? "1" : "0.1";
+    cantidadInput.step = producto.unidad === "un" ? "1" : "0.1";
+    cantidadInput.value = producto.unidad === "un" ? "1" : "0.1";
+    
+    divProducto.appendChild(cantidadInput);
+    
+    const agregarBtn = document.createElement("button");
+    agregarBtn.innerHTML = "Agregar";
+    
+    agregarBtn.addEventListener("click", () => {
+        const cantidad = parseFloat(cantidadInput.value);
+        if (cantidad <= 0 || isNaN(cantidad)) {
+            alert('La cantidad debe ser mayor a cero');
+            return;
+        }
         
-        divProducto.innerHTML = `
-            <h3>${producto.nombre}</h3>
-            <p>Precio: $${producto.precio} / ${producto.unidad}</p>
-        `;
+        // Verificar si el producto ya está en el carrito
+        const itemExistente = carrito.find(item => item.id === producto.id);
         
-        const cantidadInput = document.createElement("input");
-        cantidadInput.type = "number";
-        cantidadInput.min = producto.unidad === "un" ? "1" : "0.1";
-        cantidadInput.step = producto.unidad === "un" ? "1" : "0.1";
+        if (itemExistente) {
+            // Si existe, actualizar cantidad y subtotal
+            itemExistente.cantidad += cantidad;
+            itemExistente.subtotal = producto.precio * itemExistente.cantidad;
+        } else {
+            // Si no existe, agregar nuevo item
+            carrito.push({
+                id: producto.id,
+                nombre: producto.nombre,
+                precio: producto.precio,
+                unidad: producto.unidad,
+                cantidad: cantidad,
+                subtotal: producto.precio * cantidad,
+            });
+        }
+        
+        mostrarCarrito();
         cantidadInput.value = producto.unidad === "un" ? "1" : "0.1";
-        
-        divProducto.appendChild(cantidadInput);
-        
-        const agregarBtn = document.createElement("button");
-        agregarBtn.innerHTML = "Agregar";
-        
-        agregarBtn.addEventListener("click", () => {
-            const cantidad = parseFloat(cantidadInput.value);
-            if (cantidad <= 0 || isNaN(cantidad)) {
-                alert('La cantidad debe ser mayor a cero');
-                return;
-            }
-            
-            // Verificar si el producto ya está en el carrito
-            const itemExistente = carrito.find(item => item.id === producto.id);
-            
-            if (itemExistente) {
-                // Si existe, actualizar cantidad y subtotal
-                itemExistente.cantidad += cantidad;
-                itemExistente.subtotal = producto.precio * itemExistente.cantidad;
-            } else {
-                // Si no existe, agregar nuevo item
-                carrito.push({
-                    id: producto.id,
-                    nombre: producto.nombre,
-                    precio: producto.precio,
-                    unidad: producto.unidad,
-                    cantidad: cantidad,
-                    subtotal: producto.precio * cantidad,
-                });
-            }
-            
-            mostrarCarrito();
-            cantidadInput.value = producto.unidad === "un" ? "1" : "0.1";
-        });
-
-        divProducto.appendChild(agregarBtn);
-        fichaProducto.appendChild(divProducto);
     });
-} else {
-    console.error("No se encontró el elemento con ID 'productoFicha'");
-}
+
+    divProducto.appendChild(agregarBtn);
+    fichaProducto.appendChild(divProducto);
+});
+
 
 // Función para mostrar el carrito en el HTML
 function mostrarCarrito() {
