@@ -1,0 +1,349 @@
+/* Variables de colores y tipografía */
+:root {
+  --primary-color: #2e7d32; /* Verde principal */
+  --primary-light: #60ad5e;
+  --primary-dark: #005005;
+  --secondary-color: #ff9800; /* Naranja para acentos */
+  --background: #f5f5f5;
+  --surface: #ffffff;
+  --error: #d32f2f;
+  --text-primary: rgba(0, 0, 0, 0.87);
+  --text-secondary: rgba(0, 0, 0, 0.6);
+  --text-disabled: rgba(0, 0, 0, 0.38);
+  --font-main: 'Roboto', system-ui, -apple-system, sans-serif;
+  --border-radius: 8px;
+  --box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  --box-shadow-hover: 0 4px 8px rgba(0, 0, 0, 0.15);
+  --transition: all 0.3s ease;
+}
+
+/* reseteo y estilos base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-main);
+  color: var(--text-primary);
+  background-color: var(--background);
+  line-height: 1.5;
+  padding: 0;
+  margin: 0;
+}
+
+/* Header */
+header {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 1rem;
+  text-align: center;
+  box-shadow: var(--box-shadow);
+}
+
+header h1 {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+/* Main layout */
+main {
+  padding: 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Sección de productos */
+.productosGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+#productoFicha {
+  display: contents; /* Hace que los hijos directos participen en el grid */
+}
+
+.producto {
+  background-color: var(--surface);
+  border-radius: var(--border-radius);
+  padding: 1rem;
+  box-shadow: var(--box-shadow);
+  transition: var(--transition);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.producto:hover {
+  box-shadow: var(--box-shadow-hover);
+  transform: translateY(-2px);
+}
+
+.producto h3 {
+  color: var(--primary-dark);
+  font-size: 1.1rem;
+  margin-bottom: 0.25rem;
+}
+
+.producto p {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+.producto input[type="number"] {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.producto button {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 0.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: var(--transition);
+  font-weight: 500;
+}
+
+.producto button:hover {
+  background-color: var(--primary-dark);
+}
+
+/* Sección de carga de unidades */
+#cargaUnidades {
+  background-color: var(--surface);
+  padding: 1rem;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  margin-bottom: 2rem;
+  display: none; /* Oculto inicialmente */
+}
+
+#cargaUnidades h3 {
+  margin-bottom: 1rem;
+  color: var(--primary-dark);
+}
+
+#cargaUnidades div {
+  margin-bottom: 1rem;
+}
+
+#cargaUnidades label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: var(--text-secondary);
+}
+
+#cantidadUnidades {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+#agregarUnidades {
+  background-color: var(--secondary-color);
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: var(--transition);
+  font-weight: 500;
+  width: 100%;
+}
+
+#agregarUnidades:hover {
+  background-color: #e65100;
+}
+
+/* Carrito */
+.carritoContainer {
+  background-color: var(--surface);
+  padding: 1rem;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+}
+
+.carritoContainer h2 {
+  color: var(--primary-dark);
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #eee;
+}
+
+#carritoItems {
+  margin-bottom: 1.5rem;
+}
+
+#carritoItems li {
+  padding: 0.75rem 0;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  justify-content: space-between;
+}
+
+.total-section {
+  padding: 1rem 0;
+  border-top: 2px solid var(--primary-color);
+  font-weight: bold;
+  text-align: right;
+  font-size: 1.1rem;
+}
+
+/* Media queries para tablets y desktop */
+@media (min-width: 600px) {
+  header h1 {
+    font-size: 2rem;
+  }
+
+  .productosGrid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+
+  #cargaUnidades {
+    display: block;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (min-width: 900px) {
+  main {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+    align-items: start;
+  }
+
+  .carritoContainer {
+    position: sticky;
+    top: 1rem;
+  }
+}
+
+
+#reseteo {
+  background-color: #f44336; /* Rojo */
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: var(--transition);
+  font-weight: 500;
+  width: 100%;
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+#reseteo:hover {
+  background-color: #d32f2f; /* Rojo más oscuro */
+}
+
+#reseteo:active {
+  transform: scale(0.98);
+}
+
+/* Icono para el botón (opcional) */
+#reseteo::before {
+  content: "🗑️";
+}
+
+/* Efecto de confirmación */
+#reseteo.confirm {
+  background-color: var(--secondary-color);
+  animation: pulse 0.5s;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+/* Para desktop */
+@media (min-width: 600px) {
+  #reseteo {
+    width: auto;
+    margin-top: 1.5rem;
+  }
+}
+
+/* WhatsApp Styles */
+#Wapp {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  background-color: #f9f9f9;
+  border-radius: var(--border-radius);
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+#wappNumber {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+#wappNumber::placeholder {
+  color: #999;
+}
+
+#wappBtn {
+  background-color: #25D366; 
+  border: none;
+  padding: 0.75rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: var(--transition);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+#wappBtn:hover {
+  background-color: #128C7E; 
+}
+
+#wappBtn:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+/* WhatsApp icono */
+#wappBtn::before {
+  content: "📱";
+}
+
+@media (min-width: 600px) {
+  #Wapp {
+    flex-direction: row;
+  }
+  
+  #wappNumber {
+    flex: 1;
+  }
+  
+  #wappBtn {
+    width: auto;
+    padding: 0.75rem 1.5rem;
+  }
+}
