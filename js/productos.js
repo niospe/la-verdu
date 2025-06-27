@@ -130,7 +130,7 @@ function crearMensajeWapp () {
     let mensaje = `Gracias por tu compra en LA VERDU
     
     ${mostrarCarrito}`;
-
+return encodeURIComponent(mensaje)
 }
 
 function enviarMensajeWapp (){
