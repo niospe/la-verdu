@@ -124,20 +124,43 @@ limpiarListaArticulos.addEventListener("click", vaciarCarrito)
 const wappNumberInput = document.getElementById('wappNumber');
 const wappBtn = document.getElementById('wappBtn');
 
-function crearMensajeWapp () {
-    if (carrito.length === 0 ) return '';
-
-    let mensaje = `Gracias por tu compra en LA VERDU
+// Función para formatear el carrito como texto para WhatsApp
+function formatearCarritoParaWapp() {
+    if (carrito.length === 0) return '';
     
-    ${mostrarCarrito}`;
-return encodeURIComponent(mensaje)
+    let mensaje = "Gracias por tu compra en LA VERDU\n\n";
+    mensaje += "Detalle de tu pedido:\n";
+    
+    carrito.forEach(item => {
+        mensaje += `- ${item.nombre}: ${item.cantidad} ${item.unidad} x $${item.precio} = $${item.subtotal.toFixed(2)}\n`;
+    });
+    
+    // Calcular total
+    const total = carrito.reduce((sum, item) => sum + item.subtotal, 0);
+    mensaje += `\nTotal: $${total.toFixed(2)}`;
+    
+    return mensaje;
 }
 
-function enviarMensajeWapp (){
-    const numero = wappNumberInput.value
-    const mensaje = crearMensajeWapp();
-
-    window.open(`https://wa.me/${numero}?text=${mensaje}`, `_blank`)
+function enviarMensajeWapp() {
+    const numero = wappNumberInput.value.trim();
+    
+    // Validar número
+    if (!numero || !/^[0-9]{10,15}$/.test(numero)) {
+        alert('Por favor ingresa un número de WhatsApp válido');
+        return;
+    }
+    
+    // Validar carrito no vacío
+    if (carrito.length === 0) {
+        alert('El carrito está vacío');
+        return;
+    }
+    
+    const mensaje = formatearCarritoParaWapp();
+    const mensajeCodificado = encodeURIComponent(mensaje);
+    
+    window.open(`https://wa.me/${numero}?text=${mensajeCodificado}`, '_blank');
 }
 
-wappBtn.addEventListener(`click`, enviarMensajeWapp)
+wappBtn.addEventListener('click', enviarMensajeWapp);
