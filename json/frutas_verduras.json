@@ -1,0 +1,302 @@
+[
+    {
+        "id": 1,
+        "nombre": "Manzana",
+        "precio": 1200,
+        "unidad": "kg",
+        "tipo": "Fruta",
+        "beneficios": "Rica en fibra y antioxidantes. Mejora la digestión y controla los niveles de azúcar en sangre.",
+        "vitaminas": ["Vitamina C", "Vitamina K", "Potasio"],
+        "recomendaciones": "Consumir con cáscara para mayor beneficio de fibra."
+    },
+    {
+        "id": 2,
+        "nombre": "Banana",
+        "precio": 900,
+        "unidad": "kg",
+        "tipo": "Fruta",
+        "beneficios": "Excelente fuente de potasio, ayuda a regular la presión arterial y proporciona energía rápida.",
+        "vitaminas": ["Vitamina B6", "Vitamina C", "Potasio", "Magnesio"],
+        "recomendaciones": "Ideal para consumir antes o después del ejercicio."
+    },
+    {
+        "id": 3,
+        "nombre": "Naranja",
+        "precio": 800,
+        "unidad": "kg",
+        "tipo": "Fruta",
+        "beneficios": "Alto contenido de vitamina C, fortalece el sistema inmunológico y ayuda a absorber el hierro.",
+        "vitaminas": ["Vitamina C", "Folato", "Potasio"],
+        "recomendaciones": "Consumir fresca para maximizar la vitamina C."
+    },
+    {
+        "id": 4,
+        "nombre": "Pera",
+        "precio": 1100,
+        "unidad": "kg",
+        "tipo": "Fruta",
+        "beneficios": "Buena fuente de fibra soluble, ayuda a reducir el colesterol y regular el tránsito intestinal.",
+        "vitaminas": ["Vitamina C", "Vitamina K", "Cobre"],
+        "recomendaciones": "Madura a temperatura ambiente."
+    },
+    {
+        "id": 5,
+        "nombre": "Uva",
+        "precio": 1500,
+        "unidad": "kg",
+        "tipo": "Fruta",
+        "beneficios": "Contiene resveratrol, un antioxidante que beneficia la salud cardiovascular.",
+        "vitaminas": ["Vitamina K", "Vitamina C", "Cobre"],
+        "recomendaciones": "Lavar bien antes de consumir."
+    },
+    {
+        "id": 6,
+        "nombre": "Frutilla",
+        "precio": 2000,
+        "unidad": "kg",
+        "tipo": "Fruta",
+        "beneficios": "Ricas en antioxidantes y vitamina C, ayudan a combatir los radicales libres.",
+        "vitaminas": ["Vitamina C", "Manganeso", "Folato"],
+        "recomendaciones": "Consumir pronto después de comprar."
+    },
+    {
+        "id": 7,
+        "nombre": "Kiwi",
+        "precio": 1800,
+        "unidad": "kg",
+        "tipo": "Fruta",
+        "beneficios": "Contiene más vitamina C que una naranja, ayuda a la digestión y salud de la piel.",
+        "vitaminas": ["Vitamina C", "Vitamina K", "Vitamina E"],
+        "recomendaciones": "Se puede comer con cáscara después de lavar."
+    },
+    {
+        "id": 8,
+        "nombre": "Durazno",
+        "precio": 1300,
+        "unidad": "kg",
+        "tipo": "Fruta",
+        "beneficios": "Fuente de betacaroteno, beneficia la salud ocular y de la piel.",
+        "vitaminas": ["Vitamina A", "Vitamina C", "Potasio"],
+        "recomendaciones": "Elegir frutos ligeramente blandos al tacto."
+    },
+    {
+        "id": 9,
+        "nombre": "Ciruela",
+        "precio": 1600,
+        "unidad": "kg",
+        "tipo": "Fruta",
+        "beneficios": "Alto contenido en fibra, ayuda a regular el tránsito intestinal.",
+        "vitaminas": ["Vitamina C", "Vitamina K", "Potasio"],
+        "recomendaciones": "Consumir secas para mayor concentración de nutrientes."
+    },
+    {
+        "id": 10,
+        "nombre": "Sandía",
+        "precio": 700,
+        "unidad": "kg",
+        "tipo": "Fruta",
+        "beneficios": "Alto contenido de agua, hidrata y es baja en calorías. Contiene licopeno beneficioso para el corazón.",
+        "vitaminas": ["Vitamina C", "Vitamina A", "Magnesio"],
+        "recomendaciones": "Refrigerar antes de consumir para mejor sabor."
+    },
+    {
+        "id": 11,
+        "nombre": "Melón",
+        "precio": 900,
+        "unidad": "kg",
+        "tipo": "Fruta",
+        "beneficios": "Hidratante natural, ayuda a mantener la presión arterial estable.",
+        "vitaminas": ["Vitamina C", "Vitamina A", "Potasio"],
+        "recomendaciones": "Elegir melones que huelan dulce en el extremo del tallo."
+    },
+    {
+        "id": 12,
+        "nombre": "Ananá",
+        "precio": 1400,
+        "unidad": "un",
+        "tipo": "Fruta",
+        "beneficios": "Contiene bromelina, una enzima que ayuda a digerir las proteínas.",
+        "vitaminas": ["Vitamina C", "Manganeso", "Vitamina B6"],
+        "recomendaciones": "El núcleo es comestible y rico en fibra."
+    },
+    {
+        "id": 13,
+        "nombre": "Mango",
+        "precio": 1700,
+        "unidad": "kg",
+        "tipo": "Fruta",
+        "beneficios": "Excelente fuente de vitamina A, beneficia la salud ocular y de la piel.",
+        "vitaminas": ["Vitamina A", "Vitamina C", "Vitamina E"],
+        "recomendaciones": "Madurar a temperatura ambiente."
+    },
+    {
+        "id": 14,
+        "nombre": "Palta",
+        "precio": 2500,
+        "unidad": "un",
+        "tipo": "Fruta",
+        "beneficios": "Rica en grasas saludables, ayuda a reducir el colesterol malo.",
+        "vitaminas": ["Vitamina K", "Folato", "Vitamina C", "Potasio"],
+        "recomendaciones": "Madurar en papel periódico para acelerar el proceso."
+    },
+    {
+        "id": 15,
+        "nombre": "Limón",
+        "precio": 600,
+        "unidad": "kg",
+        "tipo": "Fruta",
+        "beneficios": "Alto en vitamina C, alcaliniza el cuerpo y ayuda a la digestión.",
+        "vitaminas": ["Vitamina C", "Potasio", "Folato"],
+        "recomendaciones": "Usar cáscara rallada para más nutrientes."
+    },
+    {
+        "id": 16,
+        "nombre": "Zanahoria",
+        "precio": 800,
+        "unidad": "kg",
+        "tipo": "Verdura",
+        "beneficios": "Rica en betacaroteno, mejora la salud ocular y de la piel.",
+        "vitaminas": ["Vitamina A", "Vitamina K", "Potasio", "Fibra"],
+        "recomendaciones": "Consumir cruda o ligeramente cocida."
+    },
+    {
+        "id": 17,
+        "nombre": "Tomate",
+        "precio": 1000,
+        "unidad": "kg",
+        "tipo": "Verdura",
+        "beneficios": "Contiene licopeno, un antioxidante que protege contra ciertos tipos de cáncer.",
+        "vitaminas": ["Vitamina C", "Vitamina K", "Potasio"],
+        "recomendaciones": "Conservar a temperatura ambiente."
+    },
+    {
+        "id": 18,
+        "nombre": "Lechuga",
+        "precio": 700,
+        "unidad": "un",
+        "tipo": "Verdura",
+        "beneficios": "Baja en calorías, buena fuente de vitamina K y agua para hidratación.",
+        "vitaminas": ["Vitamina K", "Vitamina A", "Folato"],
+        "recomendaciones": "Lavar bien hoja por hoja."
+    },
+    {
+        "id": 19,
+        "nombre": "Espinaca",
+        "precio": 900,
+        "unidad": "kg",
+        "tipo": "Verdura",
+        "beneficios": "Rica en hierro y antioxidantes, fortalece músculos y huesos.",
+        "vitaminas": ["Vitamina K", "Vitamina A", "Hierro", "Calcio"],
+        "recomendaciones": "Cocinar al vapor para preservar nutrientes."
+    },
+    {
+        "id": 20,
+        "nombre": "Brócoli",
+        "precio": 1100,
+        "unidad": "kg",
+        "tipo": "Verdura",
+        "beneficios": "Contiene sulforafano, un compuesto anticancerígeno, y es rico en fibra.",
+        "vitaminas": ["Vitamina C", "Vitamina K", "Folato"],
+        "recomendaciones": "Cocinar al dente para mejor textura y nutrientes."
+    },
+    {
+        "id": 21,
+        "nombre": "Papa",
+        "precio": 600,
+        "unidad": "kg",
+        "tipo": "Verdura",
+        "beneficios": "Buena fuente de carbohidratos complejos y potasio, energía sostenible.",
+        "vitaminas": ["Vitamina C", "Vitamina B6", "Potasio"],
+        "recomendaciones": "Conservar en lugar oscuro y fresco."
+    },
+    {
+        "id": 22,
+        "nombre": "Cebolla",
+        "precio": 500,
+        "unidad": "kg",
+        "tipo": "Verdura",
+        "beneficios": "Contiene quercetina, un antioxidante con propiedades antiinflamatorias.",
+        "vitaminas": ["Vitamina C", "Vitamina B6", "Manganeso"],
+        "recomendaciones": "Cortar bajo agua para reducir irritación ocular."
+    },
+    {
+        "id": 23,
+        "nombre": "Ajo",
+        "precio": 800,
+        "unidad": "kg",
+        "tipo": "Verdura",
+        "beneficios": "Tiene propiedades antibióticas naturales y ayuda a reducir la presión arterial.",
+        "vitaminas": ["Vitamina C", "Vitamina B6", "Manganeso"],
+        "recomendaciones": "Dejar reposar 10 minutos después de picar para activar alicina."
+    },
+    {
+        "id": 24,
+        "nombre": "Zapallo",
+        "precio": 700,
+        "unidad": "kg",
+        "tipo": "Verdura",
+        "beneficios": "Rico en betacaroteno, beneficia la visión nocturna y salud de la piel.",
+        "vitaminas": ["Vitamina A", "Vitamina C", "Potasio"],
+        "recomendaciones": "Asar para realzar su dulzor natural."
+    },
+    {
+        "id": 25,
+        "nombre": "Zucchini",
+        "precio": 900,
+        "unidad": "kg",
+        "tipo": "Verdura",
+        "beneficios": "Bajo en calorías y rico en agua, ideal para dietas de control de peso.",
+        "vitaminas": ["Vitamina C", "Vitamina B6", "Manganeso"],
+        "recomendaciones": "Se puede comer crudo en ensaladas."
+    },
+    {
+        "id": 26,
+        "nombre": "Berenjena",
+        "precio": 1000,
+        "unidad": "kg",
+        "tipo": "Verdura",
+        "beneficios": "Buena fuente de fibra y antioxidantes, ayuda a reducir el colesterol.",
+        "vitaminas": ["Fibra", "Manganeso", "Folato"],
+        "recomendaciones": "Salar antes de cocinar para reducir amargor."
+    },
+    {
+        "id": 27,
+        "nombre": "Pimiento",
+        "precio": 1200,
+        "unidad": "kg",
+        "tipo": "Verdura",
+        "beneficios": "Alto contenido de vitamina C, incluso más que las naranjas cuando está maduro.",
+        "vitaminas": ["Vitamina C", "Vitamina A", "Vitamina B6"],
+        "recomendaciones": "Los rojos son los más maduros y dulces."
+    },
+    {
+        "id": 28,
+        "nombre": "Pepino",
+        "precio": 800,
+        "unidad": "kg",
+        "tipo": "Verdura",
+        "beneficios": "Hidratante natural, compuesto en un 95% de agua, ayuda a desintoxicar.",
+        "vitaminas": ["Vitamina K", "Potasio", "Magnesio"],
+        "recomendaciones": "Consumir con cáscara para mayor fibra."
+    },
+    {
+        "id": 29,
+        "nombre": "Remolacha",
+        "precio": 900,
+        "unidad": "kg",
+        "tipo": "Verdura",
+        "beneficios": "Contiene nitratos que pueden ayudar a reducir la presión arterial.",
+        "vitaminas": ["Folato", "Manganeso", "Potasio", "Hierro"],
+        "recomendaciones": "Cocinar con cáscara y pelar después para conservar nutrientes."
+    },
+    {
+        "id": 30,
+        "nombre": "Apio",
+        "precio": 700,
+        "unidad": "un",
+        "tipo": "Verdura",
+        "beneficios": "Bajo en calorías, ayuda a la digestión y tiene efecto diurético natural.",
+        "vitaminas": ["Vitamina K", "Folato", "Potasio"],
+        "recomendaciones": "Consumir los tallos más internos que son más tiernos."
+    }
+]
